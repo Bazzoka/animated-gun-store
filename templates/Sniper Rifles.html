@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Sniper Rifles/Sniper Rifles.css">
+  <script src="/static/Sniper Rifles/Sniper Rifles.js"></script>
+  <title>Sniper Rifles</title>
+
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/Sniper Rifles/Sniper Rifles.png" alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Sniper Rifles</h1>
+    <p>
+      Sniper Rifles are precision firearms designed for long-range engagements. They are widely used by military forces, law enforcement, and sport shooters for their accuracy and power. They are typically categorized into two main types:
+      <br>
+      <strong>Bolt-Action Rifles</strong>: Known for their reliability and precision. Examples include <strong>Remington 700</strong>, <strong>Accuracy International AX50</strong>, and <strong>Winchester Model 70</strong>.
+      <br>
+      <strong>Semi-Automatic Rifles</strong>: Provide faster follow-up shots without compromising accuracy. Examples include <strong>Barrett M82</strong>, <strong>Dragunov SVD</strong>, and <strong>HK G28</strong>.
+      <br>
+      Sniper Rifles are valued for their ability to neutralize targets at extreme distances with high precision.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a gun..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/Sniper Rifles/bolt-action.png" alt="Bolt-Action">
+      <div class="selection-box">
+        <label for="bolt-action">Select</label>
+        <input type="checkbox" id="bolt-action" name="select-bolt-action">
+      </div>
+      <div class="card-content">
+        <h2>Bolt-Action Rifles</h2>
+        <p>Renowned for their precision and reliability. Popular models: Remington 700, Winchester Model 70.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sniper Rifles/semi-auto.png" alt="Semi-Automatic">
+      <div class="selection-box">
+        <label for="semi-auto">Select</label>
+        <input type="checkbox" id="semi-auto" name="select-semi-auto">
+      </div>
+      <div class="card-content">
+        <h2>Semi-Automatic Rifles</h2>
+        <p>Faster follow-up shots with exceptional accuracy. Popular models: Barrett M82, Dragunov SVD.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sniper Rifles/barrett.png" alt="Barrett M82">
+      <div class="selection-box">
+        <label for="barrett">Select</label>
+        <input type="checkbox" id="barrett" name="select-barrett">
+      </div>
+      <div class="card-content">
+        <h2>Barrett M82</h2>
+        <p>A semi-automatic sniper rifle known for its power and ability to engage targets at extreme distances.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sniper Rifles/dragunov.JPG" alt="Dragunov">
+      <div class="selection-box">
+        <label for="dragunov">Select</label>
+        <input type="checkbox" id="dragunov" name="select-dragunov">
+      </div>
+      <div class="card-content">
+        <h2>Dragunov SVD</h2>
+        <p>A reliable semi-automatic sniper rifle widely used by military forces worldwide.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sniper Rifles/accuracy-international.png" alt="Accuracy International">
+      <div class="selection-box">
+        <label for="accuracy-international">Select</label>
+        <input type="checkbox" id="accuracy-international" name="select-accuracy-international">
+      </div>
+      <div class="card-content">
+        <h2>Accuracy International AX50</h2>
+        <p>A high-precision bolt-action sniper rifle designed for long-range engagements.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sniper Rifles/hk-g28.png" alt="HK G28">
+      <div class="selection-box">
+        <label for="hk-g28">Select</label>
+        <input type="checkbox" id="hk-g28" name="select-hk-g28">
+      </div>
+      <div class="card-content">
+        <h2>HK G28</h2>
+        <p>A versatile semi-automatic sniper rifle, perfect for medium to long-range engagements.</p>
+      </div>
+    </div>
+  </div>  
+<div class="last">
+<button class="last1">Add to Cart</button>
+<button class="last2" onclick="saveToLocalStorage()">Check Out</button>
+<button class="last3" onclick="total_price()">Show Total</button>
+</div>
+<p id="total" class="total1">Total Price: </p>
+
+</body>
+</html>

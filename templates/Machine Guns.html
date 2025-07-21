@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Machine Guns/Machine Guns.css">
+  <script src="/static/Machine Guns/Machine Guns.js"></script>
+  <title>Machine Guns</title>
+
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/Machine Guns/Machine Guns.png " alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Machine Guns</h1>
+    <p>
+      Machine guns are fully automatic firearms capable of sustained rapid fire. They are primarily used in military operations for providing suppressive fire. They are typically categorized into two main types:
+      <br>
+      <strong>Light Machine Guns (LMGs)</strong>: Portable automatic firearms designed for infantry use. Examples include <strong>M249 SAW</strong>, <strong>RPK</strong>, and <strong>FN Minimi</strong>.
+      <br>
+      <strong>Heavy Machine Guns (HMGs)</strong>: Larger-caliber automatic firearms designed for longer-range and sustained fire. Examples include <strong>M2 Browning</strong>, <strong>NSV</strong>, and <strong>DShK</strong>.
+      <br>
+      Machine guns are valued for their high rate of fire and ability to dominate combat zones with suppressive firepower.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a gun..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/Machine Guns/Machine Guns.png" alt="Light Machine Gun">
+      <div class="selection-box">
+        <label for="light-machine-gun">Select</label>
+        <input type="checkbox" id="light-machine-gun" name="select-light-machine-gun">
+      </div>
+      <div class="card-content">
+        <h2>Light Machine Guns</h2>
+        <p>Portable automatic firearms designed for infantry use. Popular models: M249 SAW, FN Minimi.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Machine Guns/heavy-machine-gun.png" alt="Heavy Machine Gun">
+      <div class="selection-box">
+        <label for="heavy-machine-gun">Select</label>
+        <input type="checkbox" id="heavy-machine-gun" name="select-heavy-machine-gun">
+      </div>
+      <div class="card-content">
+        <h2>Heavy Machine Guns</h2>
+        <p>Larger-caliber automatic firearms designed for longer-range and sustained fire. Popular models: M2 Browning, DShK.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Machine Guns/minigun.png" alt="Minigun">
+      <div class="selection-box">
+        <label for="minigun">Select</label>
+        <input type="checkbox" id="minigun" name="select-minigun">
+      </div>
+      <div class="card-content">
+        <h2>Minigun</h2>
+        <p>A high-rate-of-fire rotary barrel machine gun known for its devastating firepower.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Machine Guns/rpk.png" alt="RPK">
+      <div class="selection-box">
+        <label for="rpk">Select</label>
+        <input type="checkbox" id="rpk" name="select-rpk">
+      </div>
+      <div class="card-content">
+        <h2>RPK</h2>
+        <p>A reliable light machine gun widely used for squad support roles in military operations.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Machine Guns/m60.png" alt="M60">
+      <div class="selection-box">
+        <label for="m60">Select</label>
+        <input type="checkbox" id="m60" name="select-m60">
+      </div>
+      <div class="card-content">
+        <h2>M60</h2>
+        <p>An iconic general-purpose machine gun used in various military conflicts.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Machine Guns/uzi-machine-gun.png" alt="Uzi Machine Gun">
+      <div class="selection-box">
+        <label for="uzi-machine-gun">Select</label>
+        <input type="checkbox" id="uzi-machine-gun" name="select-uzi-machine-gun">
+      </div>
+      <div class="card-content">
+        <h2>Uzi Machine Gun</h2>
+        <p>A compact and powerful submachine gun, popular for close combat scenarios.</p>
+      </div>
+    </div>
+  </div>  
+<div class="last">
+<button class="last1">Add to Cart</button>
+<button class="last2">Check Out</button>
+<button class="last3" onclick="total()">Show Total</button>
+</div>
+<p id="total" class="total1">Total Price: </p>
+
+</body>
+</html>

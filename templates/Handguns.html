@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Handguns.css">
+  <script src="/static/Handguns.js"></script>
+  <title>HandgunPage</title>
+
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/handgun/Screenshot2024-12-23150721.png" alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Handguns</h1>
+    <p>
+      Handguns are small, portable firearms designed to be held and operated with one hand. They are widely used for self-defense, law enforcement, and sport shooting. They are typically categorized into two main types:
+      <br>
+      <strong>Pistols</strong>: Semi-automatic firearms that use magazines to load multiple rounds. Examples include <strong>Glock 19</strong>, <strong>Beretta 92FS</strong>, and <strong>SIG Sauer P320</strong>.
+      <br>
+      <strong>Revolvers</strong>: Firearms with a rotating cylinder that holds multiple rounds. Examples include <strong>Colt Python</strong>, <strong>Smith & Wesson Model 29</strong>, and <strong>Ruger GP100</strong>.
+      <br>
+      Handguns are valued for their compact size, ease of concealment, and versatility in various scenarios.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a gun..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/handgun/pistol.png" alt="Pistol">
+      <div class="selection-box">
+        <label for="pistol">Select</label>
+        <input type="checkbox" id="pistol" name="select-pistol">
+      </div>
+      <div class="card-content">
+        <h2>Pistols</h2>
+        <p>Semi-automatic firearms that use magazines to load multiple rounds. Popular models: Glock 19, SIG Sauer P320.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/handgun/revolver.png" alt="Revolver">
+      <div class="selection-box">
+        <label for="revolver">Select</label>
+        <input type="checkbox" id="revolver" name="select-revolver">
+      </div>
+      <div class="card-content">
+        <h2>Revolvers</h2>
+        <p>Firearms with a rotating cylinder that holds multiple rounds. Popular models: Colt Python, Ruger GP100.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/handgun/desert-eagle.png" alt="Desert Eagle">
+      <div class="selection-box">
+        <label for="desert-eagle">Select</label>
+        <input type="checkbox" id="desert-eagle" name="select-desert-eagle">
+      </div>
+      <div class="card-content">
+        <h2>Desert Eagle</h2>
+        <p>A powerful semi-automatic handgun known for its iconic design and high-caliber rounds.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/handgun/beretta.png" alt="Beretta">
+      <div class="selection-box">
+        <label for="beretta">Select</label>
+        <input type="checkbox" id="beretta" name="select-beretta">
+      </div>
+      <div class="card-content">
+        <h2>Beretta 92FS</h2>
+        <p>A reliable semi-automatic pistol widely used by military and law enforcement worldwide.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/handgun/1911.png" alt="1911">
+      <div class="selection-box">
+        <label for="1911">Select</label>
+        <input type="checkbox" id="1911" name="select-1911">
+      </div>
+      <div class="card-content">
+        <h2>1911 Handguns</h2>
+        <p>Classic single-action, semi-automatic pistols admired for their precision and elegance.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/handgun/Uzi Handgun.png " alt="Uzi Handgun">
+      <div class="selection-box">
+        <label for="uzi">Select</label>
+        <input type="checkbox" id="uzi" name="select-uzi">
+      </div>
+      <div class="card-content">
+        <h2>Uzi Handgun</h2>
+        <p>A compact and powerful handgun with a high rate of fire, popular for close combat scenarios.</p>
+      </div>
+    </div>
+  </div>  
+<div class="last">
+<button class="last1" onclick="saveToLocalStorage()">Add to Cart</button>
+<button class="last2">check out</button>
+<button class="last3" onclick="total()">Show total</button>
+</div>
+<p id="total" class="total1">total price: </p>
+
+
+
+</body>
+</html>

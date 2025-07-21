@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .target {
+            width: 300px;
+            height: 300px;
+            background: repeating-radial-gradient(
+                circle,
+                #ff4444,
+                #ff4444 30px,
+                #ffffff 30px,
+                #ffffff 60px
+            );
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            position: relative;
+            animation: rotate 60s linear infinite;
+        }
+
+        .bullet-hole {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            border-radius: 50%;
+            border: 3px solid #333;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .title {
+            font-size: 8rem;
+            margin: 0;
+            font-weight: bold;
+            color: #ff4444;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: #ffffff;
+            
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            background: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,68,68,0.3);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes bulletHole {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .smoke {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .smoke span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: smoke 3s linear infinite;
+        }
+
+        @keyframes smoke {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(100px, -100px) scale(3);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="target" id="target"></div>
+        <h1 class="title">404</h1>
+        <h2 class="subtitle">Target Not Found</h2>
+        <p>Looks like you've missed your mark. Let's get you back on target.</p>
+        <a href="/products" class="btn">Return to Home Range</a>
+        <div class="smoke" id="smoke"></div>
+    </div>
+
+    <script>
+        document.getElementById('target').addEventListener('click', function(e) {
+            const rect = e.target.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const hole = document.createElement('div');
+            hole.className = 'bullet-hole';
+            hole.style.left = `${x - 10}px`;
+            hole.style.top = `${y - 10}px`;
+            hole.style.animation = 'bulletHole 0.3s forwards';
+            
+            e.target.appendChild(hole);
+        });
+
+        function createSmoke() {
+            const smoke = document.getElementById('smoke');
+            const span = document.createElement('span');
+            span.style.left = Math.random() * 100 + '%';
+            span.style.bottom = '0';
+            smoke.appendChild(span);
+
+            setTimeout(() => {
+                smoke.removeChild(span);
+            }, 3000);
+        }
+
+        setInterval(createSmoke, 300);
+    </script>
+</body>
+</html>

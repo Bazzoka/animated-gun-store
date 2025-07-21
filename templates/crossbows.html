@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/crossbows/crossbows.css">
+  <script src="/static/crossbows/crossbows.js"></script>
+  <title>Crossbow Page</title>
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/crossbows/crossbow .png" alt="Gun" class="gun-image">
+    <div class="bolt"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Crossbows</h1>
+    <p>
+      Crossbows are mechanical ranged weapons that use a horizontal bow mounted on a stock to shoot projectiles, called bolts. They are popular for hunting, sport shooting, and historical reenactments. Crossbows are typically categorized into two main types:
+      <br>
+      <strong>Recurve Crossbows</strong>: Crossbows with a curved bow design that provides more power and accuracy. Examples include <strong>Excalibur Matrix</strong>, <strong>TenPoint Nitro X</strong>, and <strong>Ravin R26</strong>.
+      <br>
+      <strong>Compound Crossbows</strong>: Crossbows that use a system of pulleys to reduce the draw weight while increasing power. Examples include <strong>Bear Archery X-Factor</strong>, <strong>TenPoint Viper S400</strong>, and <strong>Barnett HyperGhost 405</strong>.
+      <br>
+      Crossbows are valued for their accuracy, power, and ease of use in various scenarios.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a crossbow..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/crossbows/recurve.png" alt="Recurve Crossbow">
+      <div class="selection-box">
+        <label for="recurve">Select</label>
+        <input type="checkbox" id="recurve" name="select-recurve">
+      </div>
+      <div class="card-content">
+        <h2>Recurve Crossbows</h2>
+        <p>Crossbows with a curved bow design that offers more power and accuracy. Popular models: Excalibur Matrix, Ravin R26.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/crossbows/compound.png" alt="Compound Crossbow">
+      <div class="selection-box">
+        <label for="compound">Select</label>
+        <input type="checkbox" id="compound" name="select-compound">
+      </div>
+      <div class="card-content">
+        <h2>Compound Crossbows</h2>
+        <p>Crossbows with a pulley system that reduces draw weight while increasing power. Popular models: Bear Archery X-Factor, TenPoint Viper S400.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/crossbows/crossbow-hunter.png" alt="Hunter Crossbow">
+      <div class="selection-box">
+        <label for="hunter-crossbow">Select</label>
+        <input type="checkbox" id="hunter-crossbow" name="select-hunter-crossbow">
+      </div>
+      <div class="card-content">
+        <h2>Hunter Crossbow</h2>
+        <p>A powerful and durable crossbow designed for hunting. Known for its precision and long-range performance.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/crossbows/crossbow-ravin.png" alt="Ravin Crossbow">
+      <div class="selection-box">
+        <label for="ravin-crossbow">Select</label>
+        <input type="checkbox" id="ravin-crossbow" name="select-ravin-crossbow">
+      </div>
+      <div class="card-content">
+        <h2>Ravin R26</h2>
+        <p>A high-performance crossbow with a compact design and incredible speed, perfect for precision shooting.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/crossbows/crossbow-tenpoint.png" alt="TenPoint Crossbow">
+      <div class="selection-box">
+        <label for="tenpoint-crossbow">Select</label>
+        <input type="checkbox" id="tenpoint-crossbow" name="select-tenpoint-crossbow">
+      </div>
+      <div class="card-content">
+        <h2>TenPoint Nitro X</h2>
+        <p>Known for its cutting-edge technology and extreme accuracy, ideal for long-range hunters.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/crossbows/crossbow-barnett.png" alt="Barnett Crossbow">
+      <div class="selection-box">
+        <label for="barnett-crossbow">Select</label>
+        <input type="checkbox" id="barnett-crossbow" name="select-barnett-crossbow">
+      </div>
+      <div class="card-content">
+        <h2>Barnett HyperGhost 405</h2>
+        <p>A high-powered crossbow designed for performance and speed, built for both novice and experienced shooters.</p>
+      </div>
+    </div>
+  </div>  
+
+  <div class="last">
+    <button class="last1">Add to Cart</button>
+    <button class="last2">check out</button>
+    <button class="last3" onclick="total()">Show total</button>
+  </div>
+
+  <p id="total" class="total1">total price: </p>
+
+</body>
+</html>

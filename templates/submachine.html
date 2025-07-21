@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/submachine Guns/submachine.css">
+  <script src="/static/submachine Guns/submachine.js"></script>
+  <title>submachine</title>
+
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/submachine Guns/submachine.png" alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Submachine Guns</h1>
+    <p>
+      Submachine guns are compact, automatic firearms designed for rapid fire in close-quarters combat. They are commonly used by military, special forces, and law enforcement. Submachine guns are valued for their high rate of fire and mobility.
+      <br>
+      <strong>Compact Models</strong>: Lightweight and easy to handle, perfect for close-range engagements. Examples include <strong>Uzi</strong>, <strong>Heckler & Koch MP5</strong>, and <strong>MAC-10</strong>.
+      <br>
+      <strong>High-Capacity Models</strong>: Equipped with larger magazines for extended fire. Examples include <strong>PPSh-41</strong> and <strong>Thompson Submachine Gun</strong>.
+      <br>
+      Submachine guns are versatile and effective in urban warfare and tactical operations.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a gun..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/submachine Guns/mp5.png" alt="MP5">
+      <div class="selection-box">
+        <label for="mp5">Select</label>
+        <input type="checkbox" id="mp5" name="select-mp5">
+      </div>
+      <div class="card-content">
+        <h2>MP5</h2>
+        <p>A widely used submachine gun known for its reliability and precision, favored by military and law enforcement.</p>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="/static/submachine Guns/uzi.png" alt="Uzi">
+      <div class="selection-box">
+        <label for="uzi">Select</label>
+        <input type="checkbox" id="uzi" name="select-uzi">
+      </div>
+      <div class="card-content">
+        <h2>Uzi</h2>
+        <p>A compact submachine gun with a high rate of fire, popular in urban combat and close-quarters scenarios.</p>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="/static/submachine Guns/P90.png" alt="P90">
+      <div class="selection-box">
+        <label for="p90">Select</label>
+        <input type="checkbox" id="p90" name="select-p90">
+      </div>
+      <div class="card-content">
+        <h2>P90</h2>
+        <p>A futuristic-looking submachine gun with a top-mounted magazine, offering high capacity and compact design.</p>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="/static/submachine Guns/vector.png" alt="Vector">
+      <div class="selection-box">
+        <label for="vector">Select</label>
+        <input type="checkbox" id="vector" name="select-vector">
+      </div>
+      <div class="card-content">
+        <h2>KRISS Vector</h2>
+        <p>A modern submachine gun with a unique recoil system, designed for rapid and accurate firing.</p>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="/static/submachine Guns/thompson.png" alt="Thompson">
+      <div class="selection-box">
+        <label for="thompson">Select</label>
+        <input type="checkbox" id="thompson" name="select-thompson">
+      </div>
+      <div class="card-content">
+        <h2>Thompson</h2>
+        <p>Known as the "Tommy Gun," a classic submachine gun popular during World War II and the prohibition era.</p>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="/static/submachine Guns/scorpion .png" alt="Scorpion EVO">
+      <div class="selection-box">
+        <label for="scorpion">Select</label>
+        <input type="checkbox" id="scorpion" name="select-scorpion">
+      </div>
+      <div class="card-content">
+        <h2>Scorpion EVO</h2>
+        <p>A lightweight and compact submachine gun with excellent ergonomics, ideal for tactical operations.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+<div class="last">
+<button class="last1" onclick="move_card()">Add to Cart</button>
+<button class="last2" onclick="saveToLocalStorage()">Check Out</button>
+<button class="last3" onclick="total_price()">Show Total</button>
+</div>
+<p id="total" class="total1">Total Price: </p>
+
+</body>
+</html>

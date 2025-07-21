@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Shotguns/Shotguns.css">
+  <script src="/static/Shotguns/Shotguns.js"></script>
+  <title>Gun Page</title>
+
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/Shotguns/shotgun.png" alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Shotguns</h1>
+    <p>
+      Shotguns are versatile firearms designed for firing shells containing multiple pellets or a single slug. They are widely used for hunting, sport shooting, and home defense. Shotguns are typically categorized into two main types:
+      <br>
+      <strong>Pump-Action Shotguns</strong>: Firearms that use a sliding handguard to chamber each round. Examples include <strong>Remington 870</strong>, <strong>Mossberg 500</strong>, and <strong>Winchester SXP</strong>.
+      <br>
+      <strong>Semi-Automatic Shotguns</strong>: Firearms that automatically chamber the next round after firing. Examples include <strong>Benelli M4</strong>, <strong>Beretta 1301</strong>, and <strong>Franchi Affinity</strong>.
+      <br>
+      Shotguns are valued for their stopping power, wide shot spread, and adaptability in various scenarios.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a gun..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/Shotguns/pump-action.png" alt="Pump-Action Shotgun">
+      <div class="selection-box">
+        <label for="pump-action">Select</label>
+        <input type="checkbox" id="pump-action" name="select-pump-action">
+      </div>
+      <div class="card-content">
+        <h2>Pump-Action Shotguns</h2>
+        <p>Firearms that use a sliding handguard to chamber rounds. Popular models: Remington 870, Mossberg 500.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Shotguns/Semi-Automatic Shotguns.png" alt="Semi-Automatic Shotgun">
+      <div class="selection-box">
+        <label for="semi-auto">Select</label>
+        <input type="checkbox" id="semi-auto" name="select-semi-auto">
+      </div>
+      <div class="card-content">
+        <h2>Semi-Automatic Shotguns</h2>
+        <p>Firearms that automatically chamber the next round. Popular models: Benelli M4, Beretta 1301.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Shotguns/double-barrel.png" alt="Double-Barrel Shotgun">
+      <div class="selection-box">
+        <label for="double-barrel">Select</label>
+        <input type="checkbox" id="double-barrel" name="select-double-barrel">
+      </div>
+      <div class="card-content">
+        <h2>Double-Barrel Shotguns</h2>
+        <p>Classic shotguns with two parallel barrels. Known for reliability and power.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Shotguns/over-under.png" alt="Over-Under Shotgun">
+      <div class="selection-box">
+        <label for="over-under">Select</label>
+        <input type="checkbox" id="over-under" name="select-over-under">
+      </div>
+      <div class="card-content">
+        <h2>Over-Under Shotguns</h2>
+        <p>Shotguns with vertically stacked barrels. Ideal for clay shooting and hunting.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Shotguns/tactical-shotgun.png" alt="Tactical Shotgun">
+      <div class="selection-box">
+        <label for="tactical">Select</label>
+        <input type="checkbox" id="tactical" name="select-tactical">
+      </div>
+      <div class="card-content">
+        <h2>Tactical Shotguns</h2>
+        <p>Shotguns designed for law enforcement and home defense. Features include extended magazines and accessory rails.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Shotguns/sawed-off.png" alt="Sawed-Off Shotgun">
+      <div class="selection-box">
+        <label for="sawed-off">Select</label>
+        <input type="checkbox" id="sawed-off" name="select-sawed-off">
+      </div>
+      <div class="card-content">
+        <h2>Sawed-Off Shotguns</h2>
+        <p>Compact shotguns with shortened barrels, ideal for close-quarters use.</p>
+      </div>
+    </div>
+  </div>  
+<div class="last">
+<button class="last1">Add to Cart</button>
+<button class="last2">Check Out</button>
+<button class="last3" onclick="total()">Show Total</button>
+</div>
+<p id="total" class="total1">Total price: </p>
+
+</body>
+</html>

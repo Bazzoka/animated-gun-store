@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/RPG/RPG.css">
+  <script src="/static/RPG/RPG.js"></script>
+  <title>RPG Page</title>
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/RPG/RPG.png" alt="Gun" class="gun-image">
+    <div class="explosive"></div>
+  </div>
+
+  <div class="description">
+    <h1>RPGs</h1>
+    <p>
+      RPGs (Rocket-Propelled Grenades) are shoulder-fired weapons that launch explosive projectiles. They are widely used in military operations for their versatility and ability to penetrate armored targets. They are typically categorized into two main types:
+      <br>
+      <strong>Reusable Launchers</strong>: Launchers designed for multiple uses by replacing the rocket. Examples include <strong>RPG-7</strong> and <strong>Carl Gustaf</strong>.
+      <br>
+      <strong>Disposable Launchers</strong>: Single-use launchers designed for one-time deployment. Examples include <strong>AT4</strong> and <strong>M72 LAW</strong>.
+      <br>
+      RPGs are valued for their effectiveness in anti-tank and anti-fortification roles and are widely used in asymmetric warfare.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for an RPG..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/RPG/rpg7.png" alt="RPG-7">
+      <div class="selection-box">
+        <label for="rpg7">Select</label>
+        <input type="checkbox" id="rpg7" name="select-rpg7">
+      </div>
+      <div class="card-content">
+        <h2>RPG-7</h2>
+        <p>A reusable rocket launcher known for its reliability and widespread use in various conflicts.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/RPG/carl-gustaf.png" alt="Carl Gustaf">
+      <div class="selection-box">
+        <label for="carl-gustaf">Select</label>
+        <input type="checkbox" id="carl-gustaf" name="select-carl-gustaf">
+      </div>
+      <div class="card-content">
+        <h2>Carl Gustaf</h2>
+        <p>A versatile, reusable launcher used for anti-tank and anti-fortification purposes.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/RPG/at4.png" alt="AT4">
+      <div class="selection-box">
+        <label for="at4">Select</label>
+        <input type="checkbox" id="at4" name="select-at4">
+      </div>
+      <div class="card-content">
+        <h2>AT4</h2>
+        <p>A disposable launcher with excellent penetration capabilities, widely used by modern militaries.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/RPG/m72.PNG" alt="M72 LAW">
+      <div class="selection-box">
+        <label for="m72">Select</label>
+        <input type="checkbox" id="m72" name="select-m72">
+      </div>
+      <div class="card-content">
+        <h2>M72 LAW</h2>
+        <p>A lightweight, single-use launcher effective against lightly armored vehicles and fortifications.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/RPG/rpg29.png" alt="RPG-29">
+      <div class="selection-box">
+        <label for="rpg29">Select</label>
+        <input type="checkbox" id="rpg29" name="select-rpg29">
+      </div>
+      <div class="card-content">
+        <h2>RPG-29</h2>
+        <p>A powerful, reusable launcher designed for penetrating advanced armor systems.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/RPG/panzerfaust.png" alt="Panzerfaust">
+      <div class="selection-box">
+        <label for="panzerfaust">Select</label>
+        <input type="checkbox" id="panzerfaust" name="select-panzerfaust">
+      </div>
+      <div class="card-content">
+        <h2>Panzerfaust</h2>
+        <p>A compact, disposable launcher originally developed during World War II, known for its simplicity.</p>
+      </div>
+    </div>
+  </div>  
+<div class="last">
+<button class="last1">Add to Cart</button>
+<button class="last2">Check Out</button>
+<button class="last3" onclick="total()">Show Total</button>
+</div>
+<p id="total" class="total1">Total price: </p>
+
+</body>
+</html>

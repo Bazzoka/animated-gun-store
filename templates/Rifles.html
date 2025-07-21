@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Rifles/Rifles.css">
+  <script src="/static/Rifles/Rifles.js"></script>
+  <title>Gun Page</title>
+</head>
+<body>
+
+  <div class="gun-container">
+    <img src="/static/Rifles/Rilfles.png" alt="Gun" class="gun-image">
+    <div class="bullet"></div>
+  </div>
+  
+  <div class="description">
+    <h1>Rifles</h1>
+    <p>
+      Rifles are long-barreled firearms designed for precision shooting. They are typically fired from the shoulder and are popular for hunting, sport shooting, and military use. Rifles are often classified into different types:
+      <br>
+      <strong>Assault Rifles</strong>: Selective-fire rifles designed for military applications. Examples include <strong>AK-47</strong>, <strong>M16</strong>, and <strong>FN SCAR</strong>.
+      <br>
+      <strong>Sniper Rifles</strong>: High-precision rifles designed for long-range shooting. Examples include <strong>Barrett M82</strong>, <strong>Remington 700</strong>, and <strong>Accuracy International AXMC</strong>.
+      <br>
+      Rifles are valued for their range, accuracy, and effectiveness in various situations.
+    </p>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search-bar" placeholder="Search for a rifle..."><br>
+    <button class="searchButton" onclick="valid_input()">Search</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="/static/Rifles/ak47.png" alt="AK-47">
+      <div class="selection-box">
+        <label for="ak47">Select</label>
+        <input type="checkbox" id="ak47" name="select-ak47">
+      </div>
+      <div class="card-content">
+        <h2>AK-47</h2>
+        <p>A widely recognized assault rifle known for its durability and effectiveness in combat.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Rifles/M16.png" alt="M16">
+      <div class="selection-box">
+        <label for="m16">Select</label>
+        <input type="checkbox" id="m16" name="select-m16">
+      </div>
+      <div class="card-content">
+        <h2>M16</h2>
+        <p>An iconic military rifle, known for its accuracy and fire rate, used by the U.S. Army.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Rifles/fnscar.png" alt="FN SCAR">
+      <div class="selection-box">
+        <label for="scar">Select</label>
+        <input type="checkbox" id="scar" name="select-scar">
+      </div>
+      <div class="card-content">
+        <h2>FN SCAR</h2>
+        <p>A modular assault rifle known for its versatility and performance in various environments.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Rifles/barrett .png" alt="Barrett M82">
+      <div class="selection-box">
+        <label for="barrett">Select</label>
+        <input type="checkbox" id="barrett" name="select-barrett">
+      </div>
+      <div class="card-content">
+        <h2>Barrett M82</h2>
+        <p>A heavy sniper rifle capable of firing long-range precision shots with high-powered ammunition.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Rifles/remington700.png" alt="Remington 700">
+      <div class="selection-box">
+        <label for="remington700">Select</label>
+        <input type="checkbox" id="remington700" name="select-remington700">
+      </div>
+      <div class="card-content">
+        <h2>Remington 700</h2>
+        <p>A bolt-action rifle known for its accuracy, often used by hunters and military snipers.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/Rifles/axmc.png" alt="Accuracy International AXMC">
+      <div class="selection-box">
+        <label for="axmc">Select</label>
+        <input type="checkbox" id="axmc" name="select-axmc">
+      </div>
+      <div class="card-content">
+        <h2>Accuracy International AXMC</h2>
+        <p>A high-precision sniper rifle with modular features, used by elite military units.</p>
+      </div>
+    </div>
+  </div>  
+
+  <div class="last">
+    <button class="last1">Add to Cart</button>
+    <button class="last2" onclick="saveToLocalStorage()">Check Out</button>
+    <button class="last3" onclick="total()">Show Total</button>
+  </div>
+  
+  <p id="total" class="total1">Total Price: </p>
+
+</body>
+</html>
